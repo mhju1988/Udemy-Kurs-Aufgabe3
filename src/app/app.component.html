@@ -1,0 +1,12 @@
+<button (click)="isTheButtonClicked()" >Display Details</button>
+<button (click)="hideTheDetails()" >Hide  Details</button>
+
+<p *ngIf="display">Secret Password = tuna</p>
+
+<p style="color:chocolate" >Logs   -  Counter  {{counter}} </p>
+
+  <p   [ngStyle]="{'background-color':(logs.indexOf(log) +1) % 2 === 0 ? 'green' : 'aqua' }"
+     *ngFor="let log of logs">
+    The Button been clicked at the time {{log}} for the {{logs.indexOf(log) +1 }}
+  </p>
+
